@@ -1,17 +1,12 @@
 .signupParentDiv {
   border: 1px solid black;
-  width: max-content;
+  width: 352px;
   padding: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50vh;
   border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .signupParentDiv .input {
@@ -29,6 +24,7 @@
   color: whitesmoke;
   font-weight: 900;
 }
+
 .signupParentDiv button:hover {
   background-color: white;
   color: #002f34;
@@ -39,4 +35,8 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+
+input {
+  width: 100%;
 }
