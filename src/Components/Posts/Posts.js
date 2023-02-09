@@ -2,22 +2,26 @@ import React, { useEffect,useContext, useState } from 'react';
 import Heart from '../../assets/Heart';
 import './Post.css';
 import { FirebaseContext } from '../../store/Context'
+import { useNavigate } from 'react-router-dom';
+import { PostContext } from '../../store/PostContext';
 
 function Posts() {
 
   const db = useContext(FirebaseContext);
   const [products,setProducts]=useState([]);
+  const navigate=useNavigate();
+  const { setPostDetails }=useContext(PostContext)
 
   useEffect(()=>{
     db.collection('products').get().then((snapshort) => {
       const products = snapshort.docs.map((obj) => {
         return {
           ...obj.data(),
-          productId: obj.uid
+          productId:obj.id
         }
       })
       setProducts(products)
-    })
+    },[])
 
     
   })
@@ -32,9 +36,13 @@ function Posts() {
         </div>
         <div className="cards">
          {
-          products.map((product)=>{
-            return <div
+          products.map((product,key)=>{
+            return <div key={key}
               className="card"
+              onClick={()=>{
+                setPostDetails(product)
+                navigate('/view')
+              }}
             >
               <div className="favorite">
                 <Heart></Heart>

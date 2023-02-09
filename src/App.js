@@ -5,6 +5,7 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login'
 import Home from "./Pages/Home";
 import Create from './Pages/Create';
+import View from './Pages/ViewPost'
 import { AuthContext } from "./store/Context";
 import { auth } from "./Firebase/config";
 
@@ -21,7 +22,8 @@ function App() {
       <Route path="/" element={<Home  />} />
       <Route path="/signup" exact element={<Signup/>} />
       <Route path="/login" exact element={<Login/>} />
-      <Route path="/create" exact element={<Create/>} />
+      <Route path="/create" exact element={<Create />} />
+      <Route path="/view" exact element={<View />} />
     </Routes>
   );
 }
