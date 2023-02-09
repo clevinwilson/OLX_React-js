@@ -1,18 +1,17 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-import { initializeApp } from "firebase/app";
 import "firebase/firestore";
 import "firebase/storage";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD1s-ReHBPSlm7isnYRRYiz5ZtjU7ROPFk",
-    authDomain: "olxreact-9cd4c.firebaseapp.com",
-    projectId: "olxreact-9cd4c",
-    storageBucket: "olxreact-9cd4c.appspot.com",
-    messagingSenderId: "941247297696",
-    appId: "1:941247297696:web:bf5770c4ebbf845804f1c5"
-  };
+  apiKey: "AIzaSyC0LnSQvj4bhCmpQYL9k9jP21EOGHCcyFI",
+  authDomain: "olxreactjs-c6352.firebaseapp.com",
+  projectId: "olxreactjs-c6352",
+  storageBucket: "olxreactjs-c6352.appspot.com",
+  messagingSenderId: "65525285502",
+  appId: "1:65525285502:web:057bebd44dc2da280d4e2f"
+};
 
 
 const app = firebase.initializeApp(firebaseConfig);

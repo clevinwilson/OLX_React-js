@@ -1,9 +1,15 @@
-import React from 'react';
-
+import React, { useEffect,useContext } from 'react';
 import Heart from '../../assets/Heart';
 import './Post.css';
+import { FirebaseContext } from '../../store/Context'
 
 function Posts() {
+
+  const db = useContext(FirebaseContext);
+  useEffect(()=>{
+    
+  })
+
 
   return (
     <div className="postParentDiv">
